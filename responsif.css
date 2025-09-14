@@ -64,7 +64,7 @@
     #experience {
         background-color: rgb(211, 252, 247);
         padding: 2rem 0;
-        height: 1000px;
+        height: 1200px;
     }
     
     #services {
@@ -103,4 +103,5 @@
     #check:checked ~ .menu {right: 0;}
 
 }
+
 
