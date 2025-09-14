@@ -1,0 +1,415 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto";
+}
+
+h1,h2,h3,h4,h5,h6, strong {
+    color: black;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.9rem;
+    text-decoration: none;
+} 
+
+a, p, span, label, input, textarea, li {
+    color: gray;
+    text-decoration: none;
+}
+
+.main-container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1200px) {
+    .main-container {
+        width: 90%;
+    }
+}
+
+
+
+
+/* button */
+.btn {
+    padding: 5px 15px;
+    background: white;
+    border: 1px solid slategrey;
+    cursor: pointer;
+    transition: .2 ease-in-out;
+}
+    
+.btn:hover {
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+}
+
+
+/* titles */
+.section-title {
+    margin: 1rem 0 4rem;
+    font-size: 2rem;
+}
+
+.pre-title {
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+    color: black;
+    position: relative;
+    padding-left: 40px;
+    width: fit-content;
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+.pre-title::before{
+    content: "";
+    width: 30px;
+    height: 1px;
+    background: black;
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 45%;
+}
+
+/* layout */
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+}   
+
+
+/* logo dan navigasi menu */
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+.logo a {
+    color: black;
+}
+
+.nav-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    position: relative;
+    padding: 12px 20px;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu li {
+    padding-left: 30px;
+}
+
+.open-menu , .close-menu {
+    position: absolute;
+    color: black;
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: none;
+}
+
+.open-menu {
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+.close-menu {
+    top: 20px;
+    right: 20px;
+}
+
+#check { display: none;}
+
+/* hero section */
+#hero {
+    height: 560px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.hero-name {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: .5rem 0 1rem;
+}
+
+.hero-name span {
+    color: violet;
+}
+
+.hero-right img {
+    height: 400px;
+    width: 350px;
+    border-radius: 50%;
+}
+
+.hero-right {
+    display: flex;
+    justify-content: center;
+}
+
+/* SERVICE SECTION */
+#services {
+    height: 700px;
+    background-color: rgb(211, 252, 247);
+    padding: 2rem 0;
+}
+
+.services .pre-title {
+    margin: 0 auto;   
+}
+
+.services-title {
+    text-align: center;
+}
+
+.services {
+    padding: 4rem 1rem;
+    text-align: center;
+    background: rgb(245, 247, 246);
+}
+
+.services h4 {
+    margin: 1.5rem 0;
+    font-weight: 500;
+    font-size: 1.05rem;
+}
+
+.service-icon{
+    background: rgb(210, 235, 247);
+    width: fit-content;
+    margin: 0 auto;
+    padding: 1rem 1.3rem;
+}
+
+#portfolios {
+    height: 700px;
+    padding: 4rem 0;
+}
+
+.portfolio {
+    border-radius: ;
+    overflow: hidden;
+}
+
+.portfolio-cover {
+    height: 190px;
+}
+
+.portfolio-cover img {
+    border-radius: 5%;
+    width: 390px;
+    height: 200px;
+    object-fit: cover;
+    background-size: cover;
+}
+
+.portfolio-info {
+    padding: 2rem 1.5rem;
+}
+
+.portfolio-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.portfolio h4 {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.portfolio-tags {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.portfolio-tags div {
+    font-size: .9rem;
+    border: 1px solid white;
+    padding: .4rem 1rem;
+    color: rgb(130, 131, 131);
+}
+
+/* experience & education */
+
+#experience {
+    background-color: rgb(211, 252, 247);
+    padding: 2rem 0;
+    height: 800px;
+}
+
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+}
+
+.education {
+    display: flex;
+    gap: 2rem;
+}
+
+.education .line {
+    padding: 0.7rem;
+}
+
+.education .line div {
+    width: 2px;
+    height: 110px;
+    background: grey;
+    position: relative;
+}
+
+.education-info p {
+    margin: .6rem 0 1.4rem; 
+} 
+.education-years {
+    margin-bottom: 3rem;
+}
+
+/* titik list education */
+
+.education .line div::before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    background: blue;
+    border-radius: 50%;
+    position: absolute;
+    left: -6px;
+}
+
+.experience-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 1.5rem;
+}
+
+.experience-right ul {
+    line-height: 2rem;
+    padding: 0 1rem;
+}
+/* end experience */
+
+/* contact */
+
+#contact {
+    padding: 5rem 0;
+    height: 700px;
+}
+
+.contact {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+.contact-form div {
+    margin-bottom: 1.4rem;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 90%;
+    padding: .75rem 1.3rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: rgb(228, 223, 223);
+    border: 1px solid rgb(165, 165, 158);
+    border-radius: 3px;
+    resize: none;
+}
+
+.contact-form input::placeholder, .contact-form textarea::placeholder {
+    color: rgb(133, 133, 133);
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    outline: none;
+    border: 1px solid rgb(15, 15, 15);
+}
+
+.btn-submit {
+    width: 90%;
+    padding: .75rem 1.3rem;
+    background-color: rgb(12, 40, 197);
+    color: rgb(237, 241, 241);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+.btn-submit:hover {
+    background: rgb(2, 2, 138);
+}
+
+/* bagian kanan */
+
+.contact-item {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.contact-item-icon {
+    background:rgb(228, 223, 223);
+    width: 53px;
+    height: 53px;
+    border-radius: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-item-detail h4 {
+    margin-bottom: 0.6rem;
+
+}
+
+footer {
+    padding: 4rem 0;
+    background: rgb(235, 235, 235);
+    text-align: center;
+}
+.footer-icon {
+    margin-bottom: 1rem;
+}
+
+.footer-icon a {
+    margin: 0 .5rem;
+}
+
+.reveal {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 2s ease;
+}
+
+.reveal.active {
+    transform: translateY(0px);
+    opacity: 1;
+}
